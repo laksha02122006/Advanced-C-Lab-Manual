@@ -13,11 +13,19 @@ Algorithm:
  
 Program:
 
-//type your code here
-
+~~~
+int stack[40],top,i; void display()
+{
+for(i=top;i>=0;i--)
+{
+printf("%d\n",stack[i]);
+}
+}
+~~~
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/6149139d-5c98-44f4-829c-f61590a8a4cd)
+
 
 
 
@@ -36,11 +44,25 @@ Algorithm:
  
 Program:
 
-//type your code here
+~~~
+int size=3,top=1; float stack[40];
+void push (float data)
+{
+if (top==size-1 )
+{
+printf("stack is full\n");
+}
+else
+{
+top ++; stack[top] = data;
+}
+}
+~~~
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/907d8e8f-0167-48f0-a23d-e83abebed75a)
+
 
 
 
@@ -62,11 +84,26 @@ Algorithm:
  
 Program:
 
-//type your code here
+~~~
+nt queue[50], rear, front,i; void display()
+{
+if(front==-1)
+{
+printf("No elements to display");
+}
+else
+{
+for(i=front;i<=rear;i++)
+{
+printf("%d ",queue[i]);
+}
+}
+}
+~~~
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/a95e0405-e3e2-4aef-9cdd-538977a9447a)
 
 
 Result:
@@ -85,12 +122,27 @@ Algorithm:
 4.	Call the enqueue function as needed.
 
 Program:
+~~~
+int size=4, rear=-1, front=-1; float queue[50];
+void enqueue(float data)
+{
+if(rear<size)
+{
+if(front==-1)
+{
+front=0;
+}
+rear=rear+1; queue[rear]=data;
+}
+}
+~~~
 
-//type your code here
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/b221283d-fd7f-454b-a75f-7f1b20a50406)
+
+
 
 Result:
 Thus, the program to insert elements in queue using array is verified successfully.
@@ -121,11 +173,24 @@ o	After deletion, check if the front pointer has passed the rear pointer (front 
 
 Program:
 
-//type your code here
+~~~
+int front, rear;
+void dequeue()
+{
+    if(front==-1&&rear==-1)
+    printf("Queue Underflow.");
+    else if(front==rear)
+    front=rear=-1;
+    else{
+        front=front+1;
+    }
+}
+~~~
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/526ac2a4-2418-4a67-abe3-f995d7e79e52)
+
 
 
 Result:
